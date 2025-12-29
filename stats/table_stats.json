@@ -1,0 +1,19 @@
+[
+    {
+    "table": "orders",
+    "row_count": 120000000,
+    "size_mb": 48000,
+    "partition_cols": ["order_date"],
+    "zorder_cols": ["customer_id"],
+    "skewed_cols": ["region"]
+    },
+
+    {
+    "table": "customer",
+    "row_count": 120000,
+    "size_mb": 4800,
+    "partition_cols": ["customer_id"],
+    "zorder_cols": ["customer_name"],
+    "skewed_cols": ["country"]
+    }
+]
