@@ -92,17 +92,17 @@ graph TD
 2. **Example Query Analysis**:
    ```python
    # Example query metadata
-   query_meta = {
-       "user_name": "test_user",
-       "statement_text": "SELECT * FROM large_table WHERE date > '2023-01-01'",
-       "status": "COMPLETED",
-       "start_time": datetime(2023, 1, 1, 10, 0, 0),
-       "end_time": datetime(2023, 1, 1, 10, 0, 45)
-   }
-   
-   # Create and run the optimizer
-   optimizer = QueryOptimizer()
-   result = optimizer.optimize(query_meta)
+   initial_state = {
+        "query": {
+            "user_name": "alice",
+            "statement_text": "SELECT * FROM orders WHERE amount > 1000",
+            "status": "SUCCESS",
+            "start_time": "2025-01-01T10:00:00",
+            "end_time": "2025-01-01T10:06:00"
+        }
+    }
+
+   final_state = app.invoke(initial_state)
    ```
 
 3. **View Optimization Results**:
