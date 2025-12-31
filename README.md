@@ -33,6 +33,10 @@ Before you begin, ensure you have the following installed:
    GROQ_API_KEY=your_groq_api_key
    OPENAI_API_KEY=your_openai_api_key
    LANGSMITH_API_KEY=your_langsmith_api_key
+   LANGSMITH_TRACING=true
+   LANGSMITH_ENDPOINT=https://api.smith.langchain.com
+   LANGSMITH_PROJECT=query-opt-agentic-ai
+
    ```
 
 3. **Install dependencies**:
