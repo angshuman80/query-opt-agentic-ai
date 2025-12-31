@@ -108,6 +108,21 @@ graph TD
 
    final_state = app.invoke(initial_state)
    ```
+   ***Real World Scenario***
+   In the real world scenario with DataBricks the input can be from 
+   **system.query history**
+   ```sql
+   SELECT 
+    statement_text,
+    executed_as,
+    start_time,
+    total_duration_ms,
+    produced_rows
+FROM system.query.history
+WHERE update_time >= CURRENT_DATE() - INTERVAL 7 DAYS
+ORDER BY total_duration_ms DESC
+LIMIT 10;
+```
 
 3. **View Optimization Results**:
    The system will provide:
