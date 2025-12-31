@@ -118,10 +118,10 @@ graph TD
     start_time,
     total_duration_ms,
     produced_rows
-FROM system.query.history
-WHERE update_time >= CURRENT_DATE() - INTERVAL 7 DAYS
-ORDER BY total_duration_ms DESC
-LIMIT 10;
+    FROM system.query.history
+    WHERE update_time >= CURRENT_DATE() - INTERVAL 7 DAYS
+    ORDER BY total_duration_ms DESC
+    LIMIT 10;
 ```
 
 3. **View Optimization Results**:
