@@ -5,6 +5,8 @@ import json
 
 mcp = FastMCP("query-optimizer")
 
+
+
 @mcp.tool(name="get_query_history",
  description="Get the query history for a given query id.")
 def get_query_history(query_id:str)->dict:
